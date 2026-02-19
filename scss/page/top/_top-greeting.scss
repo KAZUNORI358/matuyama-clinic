@@ -1,0 +1,146 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-greeting
+------------------------------
+*/
+
+.greeting {
+    padding: 48rem 0 120rem 0;
+    position: relative;
+    overflow: hidden;
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url("../../../img/top/greeting/greeting-bg-logo-sp.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        top: 63%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 380rem;
+        height: 240rem;
+    }
+
+    @include g.mq(md) {
+        padding: 85rem 0 181rem 0;
+        &::before {
+            background-image: url("../../../img/top/greeting/greeting-bg-logo-pc.png");
+            top: 50%;
+            left: 67%;
+            transform: translate(-50%, -50%);
+            width: 1240rem;
+            height: 332rem;
+        }
+    }
+}
+
+.greeting-wrapper {
+    @include g.mq(md) {
+        display: grid;
+        grid-template-columns: 533rem 1fr;
+        gap: 87rem;
+    }
+}
+
+.greeting-image-wrapper {
+    width: 282rem;
+
+    @include g.mq(md) {
+        width: 533rem;
+        height: 705rem;
+    }
+}
+
+.greeting-image {
+    display: block;
+    width: 282rem;
+    height: 373rem;
+    & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    @include g.mq(md) {
+        width: 533rem;
+        height: 705rem;
+    }
+}
+
+.greeting-container {
+    margin-top: 48rem;
+    padding: 0 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 32rem;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url("../../../img/top/greeting/greeting-image02-sp.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        bottom: -52rem;
+        right: 0;
+        width: 132rem;
+        height: 200rem;
+    }
+    @include g.mq(md) {
+        margin-top: 0;
+        padding: 76rem 0 59rem 0;
+        gap: 56rem;
+
+        &::before {
+            background-image: url("../../../img/top/greeting/greeting-image02-pc.png");
+            bottom: -74rem;
+            right: 84rem;
+            width: 300rem;
+            height: 300rem;
+        }
+    }
+}
+
+.greeting-main-text {
+    font-size: 32rem;
+    font-weight: 700;
+    line-height: 1.7;
+    @include g.mq(md) {
+        align-items: flex-start;
+    }
+    span {
+        display: block;
+
+        @include g.mq(md) {
+            &.is-no-break-pc {
+                display: inline;
+            }
+        }
+    }
+    @include g.mq(md) {
+        font-size: 40rem;
+    }
+}
+
+.greeting-sub-text {
+    margin-top: 32rem;
+    line-height: 2.2;
+    span {
+        display: block;
+        &.is-no-break-sp {
+            display: inline;
+            @include g.mq(md) {
+                display: block;
+            }
+        }
+    }
+}
+
+.greeting-sub-text02 {
+    margin-top: 24rem;
+    line-height: 2.2;
+    position: relative;
+    z-index: 1;
+}

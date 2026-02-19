@@ -1,0 +1,23 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-kv
+------------------------------
+*/
+
+.top-kv {
+    position: relative;
+    .top-kv-copy {
+        position: absolute;
+        top: 56%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 94vw;
+        height: auto;
+        @include g.mq(md) {
+            width: 664rem;
+            height: 268rem;
+            top: 46%;
+        }
+    }
+}

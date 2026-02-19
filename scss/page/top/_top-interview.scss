@@ -1,0 +1,113 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-interview
+------------------------------
+*/
+
+.interview-bg {
+    position: relative;
+    z-index: var(--z-index-background);
+    img {
+        display: block;
+        object-fit: contain;
+    }
+}
+.interview-container {
+    position: relative;
+    z-index: var(--z-index-default);
+    margin-top: -40rem;
+    padding: 80rem 0;
+    background-color: var(--color-bg-base);
+    @include g.mq(md) {
+        margin-top: -80rem;
+        padding: 120rem 0;
+    }
+}
+
+.interview-card {
+    @include g.mq(md) {
+        &:last-child {
+            margin-top: 56rem;
+        }
+    }
+}
+.interview-card-container {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -40rem;
+        left: -20rem;
+        width: 100vw;
+        height: 100%;
+        background-image: url("../../../img/top/interview/Interview bg-mask-text-sp.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1;
+        @include g.mq(md) {
+            background-image: url("../../../img/top/interview/Interview bg-mask-text.png");
+            bottom: 30rem;
+            left: -70rem;
+        }
+    }
+    @include g.mq(md) {
+        flex-direction: row;
+        gap: 44rem;
+        justify-content: center;
+    }
+}
+
+.interview-card-image-container {
+    position: relative;
+    margin-top: 40px;
+}
+
+.interview-card-image {
+    @include g.mq(md) {
+        max-width: 524rem;
+        max-height: 390rem;
+        aspect-ratio: 524 / 390;
+    }
+
+    img {
+        object-fit: cover;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.interview-card-text {
+    position: absolute;
+    bottom: 16rem;
+    left: 16rem;
+    font-size: 20rem;
+    font-weight: bold;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    span {
+        padding: 3rem 8rem;
+        background-color: var(--color--white);
+        display: inline-block;
+        width: fit-content;
+    }
+    @include g.mq(md) {
+        font-size: 22rem;
+        gap: 8rem;
+        bottom: 24rem;
+        left: 24rem;
+    }
+}
+
+.interview-card-button {
+    margin-top: 24rem;
+    margin-inline: auto;
+}

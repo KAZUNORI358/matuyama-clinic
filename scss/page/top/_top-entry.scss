@@ -1,0 +1,55 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-entry
+------------------------------
+*/
+
+.entry {
+    background-color: var(--color-bg-entry);
+    @include g.mq(md) {
+        display: flex;
+        align-items: center;
+        gap: 72rem;
+    }
+}
+.entry-pc-container {
+    @include g.mq(md) {
+        width: min(91%, var(--width-content-l));
+        margin-inline: auto;
+    }
+}
+
+.entry-image {
+    img {
+        @include g.mq(md) {
+            width: 740rem;
+            height: 472rem;
+            object-fit: cover;
+        }
+    }
+}
+
+.entry-content {
+    padding: 48rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20rem;
+
+    @include g.mq(md) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    @include g.mq(md) {
+        flex-direction: column;
+        padding: 0;
+        gap: 30rem;
+    }
+}
+
+.entry-content-text {
+    span {
+        display: block;
+    }
+}
