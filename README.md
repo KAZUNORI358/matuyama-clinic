@@ -12,7 +12,7 @@ Hello Mentor の課題でFigmaのデザインカンプをもとに、コーデ�
 
 ## 公開URL
 
-URLが入ります
+[matuyama-clinic.kazunori-folio.com/](https://matuyama-clinic.kazunori-folio.com/)
 
 ## 概要
 
@@ -46,5 +46,6 @@ Masuyama-Clinic/
 
 ## コーディングルール
 
-- **命名規則**: FLOCSS (c-, p-, l- プレフィックスを使用)
+- **命名規則**: FLOCSS (c-,l- プレフィックスを使用)
 - **CSS**: Sass(SCSS) を使用
+- **REM単位**: 文字サイズ、余白の指定にrem (root em) 単位を使用しています。
